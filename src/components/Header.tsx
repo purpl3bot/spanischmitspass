@@ -23,8 +23,8 @@ const navItems: NavItem[] = [
 ]
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label, external = false, isActive }) => {
-  const className = `font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
-    isActive ? 'ring-2 ring-blue-600 ring-offset-2' : ''
+  const className = `font-hand text-black hover:text-orange-600 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
+    isActive ? 'ring-2 ring-orange-600 ring-offset-2' : ''
   }`
 
   if (external) {
@@ -49,7 +49,7 @@ export default function Header() {
   return (
     <header className="bg-yellow-200 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-600">
+        <Link href="/" className="text-2xl font-bold text-black">
           🏠
         </Link>
         <nav className="hidden md:flex space-x-4">
