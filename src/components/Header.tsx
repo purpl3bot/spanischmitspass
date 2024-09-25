@@ -14,10 +14,10 @@ export default function Header() {
           🏠
         </Link>
         <nav className="hidden md:flex space-x-4">
-          <Link href="/about" className="text-blue-600 hover:text-blue-800">About Us</Link>
-          <Link href="/classes" className="text-blue-600 hover:text-blue-800">Our Classes</Link>
-          <Link href="/contact" className="text-blue-600 hover:text-blue-800">Contact</Link>
-          <Link href="/form" className="text-blue-600 hover:text-blue-800">Start Your Classes</Link>
+          <Link href="/about" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">About Us</Link>
+          <Link href="/classes" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Our Classes</Link>
+          <Link href="/contact" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Contact</Link>
+          <a href="https://forms.google.com/your-form-url" target="_blank" rel="noopener noreferrer" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Start Your Classes</a>
         </nav>
         <LanguageToggle />
         <button
@@ -31,10 +31,10 @@ export default function Header() {
       </div>
       {isOpen && (
         <div className="md:hidden mt-4">
-          <Link href="/about" className="block py-2 text-blue-600 hover:text-blue-800">About Us</Link>
-          <Link href="/classes" className="block py-2 text-blue-600 hover:text-blue-800">Our Classes</Link>
-          <Link href="/contact" className="block py-2 text-blue-600 hover:text-blue-800">Contact</Link>
-          <Link href="/form" className="block py-2 text-blue-600 hover:text-blue-800">Start Your Classes</Link>
+          <Link href="/about" className="font-hand block py-2 text-blue-600 hover:text-blue-800">About Us</Link>
+          <Link href="/classes" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Our Classes</Link>
+          <Link href="/contact" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Contact</Link>
+          <a href="https://forms.google.com/your-form-url" target="_blank" rel="noopener noreferrer" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Start Your Classes</a>
         </div>
       )}
     </header>
