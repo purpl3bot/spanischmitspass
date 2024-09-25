@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
   { href: '/about', label: 'About Us' },
   { href: '/classes', label: 'Our Classes' },
   { href: '/contact', label: 'Contact' },
-  { href: 'https://forms.google.com/your-form-url', label: 'Start Your Classes', external: true },
+  { href: 'https://forms.gle/DRNo9rQVjoWBTyECA', label: 'Start Your Classes', external: true },
 ]
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label, external = false, isActive }) => {
