@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-64 h-64 relative mb-8">
         <Image
-          src="/images/placeholder.gif"
+          src="/public/logo.jpg"
           alt="Animated GIF"
           layout="fill"
           objectFit="cover"
