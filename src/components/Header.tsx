@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label, external = false, isActive }) => {
   const className = `font-hand text-black hover:text-orange-600 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
-    isActive ? 'ring-2 ring-orange-600 ring-offset-2' : ''
+    isActive ? 'ring-2 ring-orange-400 ring-offset-2' : ''
   }`
 
   if (external) {
