@@ -13,7 +13,6 @@ export const metadata = {
     icon: '/favicon.png',
   },
 }
-}
 
 export default function RootLayout({
   children,
