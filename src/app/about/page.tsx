@@ -14,10 +14,27 @@ export default function About() {
             className="rounded-full mb-4 md:mb-0 md:mr-8"
           />
           <p className="text-center md:text-left">
-            María has been teaching Spanish for over 10 years. She loves to incorporate music and games into her lessons to make learning fun and engaging.
+            Ludmila is a certified spanish teacher known for her
+engaging and humorous approach to language
+instruction. Beyond the classroom, she is a prolific
+artist with a passion for photography, design, and
+cinema. She likes making the learning experience as
+enjoyable and ludic as possible. With her expertise
+in language education, she offers students a rich,
+multifaceted perspective that extends beyond
+traditional learning.
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center">
+          <p className="text-center md:text-left">
+            Lucía is a multifaceted educator and licensed
+psychologist with a deep passion for language and
+literature. With an also path for creative writing
+master degree in Sevilla and an extensive experience
+in poetry writing workshops. Involved in literature,
+bringing a creative and holistic approach to
+teaching, inspiring a dynamic learning.
+          </p>
           <Image
             src="/fotolp2.jpg"
             alt="Teacher 2"
@@ -25,9 +42,6 @@ export default function About() {
             height={200}
             className="rounded-full mb-4 md:mb-0 md:mr-8"
           />
-          <p className="text-center md:text-left">
-            Carlos is a native Spanish speaker with a passion for literature. He enjoys using short stories and poems to help students improve their language skills.
-          </p>
         </div>
       </div>
     </div>
