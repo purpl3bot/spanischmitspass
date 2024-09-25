@@ -13,6 +13,10 @@ module.exports = {
         accent1: '#98FB98', // Pale Green
         accent2: '#FFA07A', // Light Salmon
       },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        hand: ['var(--font-patrick-hand)'],
+      },
     },
   },
   plugins: [],
