@@ -7,7 +7,7 @@ export default function About() {
       <div className="space-y-12">
         <div className="flex flex-col md:flex-row items-center">
           <Image
-            src="/images/teacher1.jpg"
+            src="/public/fotolud2.jpg"
             alt="Teacher 1"
             width={200}
             height={200}
@@ -19,7 +19,7 @@ export default function About() {
         </div>
         <div className="flex flex-col md:flex-row items-center">
           <Image
-            src="/images/teacher2.jpg"
+            src="/public/fotolp2.jpg"
             alt="Teacher 2"
             width={200}
             height={200}
