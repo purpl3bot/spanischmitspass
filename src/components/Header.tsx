@@ -2,10 +2,40 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import LanguageToggle from './LanguageToggle'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  const navItems = [
+    { href: '/about', label: 'About Us' },
+    { href: '/classes', label: 'Our Classes' },
+    { href: '/contact', label: 'Contact' },
+    { href: 'https://forms.google.com/your-form-url', label: 'Start Your Classes', external: true },
+  ]
+
+  const NavLink = ({ href, label, external = false }) => {
+    const isActive = pathname === href
+    const className = `font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
+      isActive ? 'ring-2 ring-blue-600 ring-offset-2' : ''
+    }`
+
+    if (external) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+          {label}
+        </a>
+      )
+    }
+
+    return (
+      <Link href={href} className={className}>
+        {label}
+      </Link>
+    )
+  }
 
   return (
     <header className="bg-yellow-200 p-4">
@@ -14,10 +44,9 @@ export default function Header() {
           🏠
         </Link>
         <nav className="hidden md:flex space-x-4">
-          <Link href="/about" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">About Us</Link>
-          <Link href="/classes" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Our Classes</Link>
-          <Link href="/contact" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Contact</Link>
-          <a href="https://forms.google.com/your-form-url" target="_blank" rel="noopener noreferrer" className="font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200">Start Your Classes</a>
+          {navItems.map((item) => (
+            <NavLink key={item.href} {...item} />
+          ))}
         </nav>
         <LanguageToggle />
         <button
@@ -31,10 +60,9 @@ export default function Header() {
       </div>
       {isOpen && (
         <div className="md:hidden mt-4">
-          <Link href="/about" className="font-hand block py-2 text-blue-600 hover:text-blue-800">About Us</Link>
-          <Link href="/classes" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Our Classes</Link>
-          <Link href="/contact" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Contact</Link>
-          <a href="https://forms.google.com/your-form-url" target="_blank" rel="noopener noreferrer" className="font-hand block py-2 text-blue-600 hover:text-blue-800">Start Your Classes</a>
+          {navItems.map((item) => (
+            <NavLink key={item.href} {...item} />
+          ))}
         </div>
       )}
     </header>
