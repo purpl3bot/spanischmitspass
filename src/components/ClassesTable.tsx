@@ -1,4 +1,4 @@
-llexport default function ClassesTable() {
+export default function ClassesTable() {
   return (
     <div>
       <table className="w-full border-collapse border border-orange-400 mb-4">
