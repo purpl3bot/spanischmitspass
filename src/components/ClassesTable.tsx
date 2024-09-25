@@ -1,9 +1,9 @@
-export default function ClassesTable() {
+llexport default function ClassesTable() {
   return (
     <div>
-      <table className="w-full border-collapse border border-gray-300 mb-4">
+      <table className="table-auto w-full border-collapse border border-orange-400 mb-4">
         <thead>
-          <tr className="bg-blue-100">
+          <tr className="bg-orange-400">
             <th className="border border-gray-300 p-2">Class Name</th>
             <th className="border border-gray-300 p-2">Duration</th>
             <th className="border border-gray-300 p-2">Price</th>
