@@ -9,6 +9,10 @@ const patrickHand = Patrick_Hand({ weight: '400', subsets: ['latin'], variable: 
 export const metadata = {
   title: 'Spanisch mit Spass',
   description: 'Learn Spanish with fun in Berlin',
+  icons: {
+    icon: '/favicon.png',
+  },
+}
 }
 
 export default function RootLayout({
