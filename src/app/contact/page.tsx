@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+      <h1 className="font-hand text-3xl font-bold mb-8 text-center">Contact Us</h1>
       <div className="max-w-md mx-auto">
         <p className="mb-4">
           We'd love to hear from you! If you have any questions about our classes or would like to schedule a trial lesson, please don't hesitate to get in touch.
