@@ -3,7 +3,7 @@ export default function ClassesTable() {
     <div>
       <table className="w-full border-collapse border border-orange-400 mb-4">
         <thead>
-          <tr className="bg-orange-400">
+          <tr className="bg-yellow-200">
             <th className="border rounded-tl-* rounded-[8px] border-gray-300 p-2">Class Name</th>
             <th className="border border-gray-300 p-2">Duration</th>
             <th className="border rounded-tr-* rounded-[8px] border-gray-300 p-2">Price</th>
