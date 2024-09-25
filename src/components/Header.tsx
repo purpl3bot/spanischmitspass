@@ -5,37 +5,46 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import LanguageToggle from './LanguageToggle'
 
+interface NavItem {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+interface NavLinkProps extends NavItem {
+  isActive: boolean;
+}
+
+const navItems: NavItem[] = [
+  { href: '/about', label: 'About Us' },
+  { href: '/classes', label: 'Our Classes' },
+  { href: '/contact', label: 'Contact' },
+  { href: 'https://forms.google.com/your-form-url', label: 'Start Your Classes', external: true },
+]
+
+const NavLink: React.FC<NavLinkProps> = ({ href, label, external = false, isActive }) => {
+  const className = `font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
+    isActive ? 'ring-2 ring-blue-600 ring-offset-2' : ''
+  }`
+
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {label}
+      </a>
+    )
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+    </Link>
+  )
+}
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-
-  const navItems = [
-    { href: '/about', label: 'About Us' },
-    { href: '/classes', label: 'Our Classes' },
-    { href: '/contact', label: 'Contact' },
-    { href: 'https://forms.google.com/your-form-url', label: 'Start Your Classes', external: true },
-  ]
-
-  const NavLink = ({ href, label, external = false }) => {
-    const isActive = pathname === href
-    const className = `font-hand text-blue-600 hover:text-blue-800 bg-white px-4 py-2 rounded-full transition-colors duration-200 ${
-      isActive ? 'ring-2 ring-blue-600 ring-offset-2' : ''
-    }`
-
-    if (external) {
-      return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-          {label}
-        </a>
-      )
-    }
-
-    return (
-      <Link href={href} className={className}>
-        {label}
-      </Link>
-    )
-  }
 
   return (
     <header className="bg-yellow-200 p-4">
@@ -45,7 +54,7 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex space-x-4">
           {navItems.map((item) => (
-            <NavLink key={item.href} {...item} />
+            <NavLink key={item.href} {...item} isActive={pathname === item.href} />
           ))}
         </nav>
         <LanguageToggle />
@@ -61,7 +70,7 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden mt-4">
           {navItems.map((item) => (
-            <NavLink key={item.href} {...item} />
+            <NavLink key={item.href} {...item} isActive={pathname === item.href} />
           ))}
         </div>
       )}
