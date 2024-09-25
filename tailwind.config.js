@@ -17,6 +17,12 @@ module.exports = {
         sans: ['var(--font-inter)'],
         hand: ['var(--font-patrick-hand)'],
       },
+      ringColor: {
+        'blue': '#2563eb', // Adjust this color as needed
+      },
+      ringOffsetWidth: {
+        '2': '2px',
+      },
     },
   },
   plugins: [],
